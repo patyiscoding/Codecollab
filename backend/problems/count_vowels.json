@@ -1,0 +1,30 @@
+{
+  "id": "count_vowels",
+  "title": "Count Vowels",
+  "statement": "Write a program to count the number of vowels (a, e, i, o, u) in a string.\n\nInput: A single line containing a string (may contain spaces).\nOutput: Print the count of vowels (case-insensitive).\n\nExample:\n  Input: Hello World\n  Output: 3",
+  "time_limit_ms": 1000,
+  "output_limit_bytes": 65536,
+  "testcases": [
+    {
+      "input": "Hello World\n",
+      "expected": "3\n"
+    },
+    {
+      "input": "aeiou\n",
+      "expected": "5\n"
+    },
+    {
+      "input": "xyz\n",
+      "expected": "0\n"
+    },
+    {
+      "input": "AEIOU\n",
+      "expected": "5\n"
+    },
+    {
+      "input": "Programming is fun\n",
+      "expected": "5\n"
+    }
+  ]
+}
+

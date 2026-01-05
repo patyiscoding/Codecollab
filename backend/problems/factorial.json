@@ -1,0 +1,30 @@
+{
+  "id": "factorial",
+  "title": "Factorial",
+  "statement": "Write a program to calculate the factorial of a non-negative integer n.\n\nFactorial of n (written as n!) is the product of all positive integers less than or equal to n.\nFor example: 5! = 5 × 4 × 3 × 2 × 1 = 120\n\nInput: A single integer n (0 ≤ n ≤ 20).\nOutput: Print the factorial of n.\n\nExample:\n  Input: 5\n  Output: 120",
+  "time_limit_ms": 1000,
+  "output_limit_bytes": 65536,
+  "testcases": [
+    {
+      "input": "0\n",
+      "expected": "1\n"
+    },
+    {
+      "input": "1\n",
+      "expected": "1\n"
+    },
+    {
+      "input": "5\n",
+      "expected": "120\n"
+    },
+    {
+      "input": "10\n",
+      "expected": "3628800\n"
+    },
+    {
+      "input": "15\n",
+      "expected": "1307674368000\n"
+    }
+  ]
+}
+

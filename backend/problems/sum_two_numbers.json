@@ -1,0 +1,14 @@
+{
+  "id": "sum_two_numbers",
+  "title": "Sum Two Numbers",
+  "statement": "Read two integers a and b from stdin and print a+b.",
+  "time_limit_ms": 1000,
+  "output_limit_bytes": 32000,
+  "testcases": [
+    { "stdin": "1 2\n", "stdout": "3\n" },
+    { "stdin": "10 20\n", "stdout": "30\n" },
+    { "stdin": "-5 7\n", "stdout": "2\n" }
+  ]
+}
+
+

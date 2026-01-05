@@ -1,0 +1,30 @@
+{
+  "id": "palindrome",
+  "title": "Palindrome Check",
+  "statement": "Write a program to check if a given string is a palindrome.\n\nA palindrome is a string that reads the same forward and backward (ignoring case).\n\nInput: A single line containing a string (no spaces).\nOutput: Print \"YES\" if the string is a palindrome, \"NO\" otherwise.\n\nExamples:\n  Input: racecar\n  Output: YES\n\n  Input: hello\n  Output: NO",
+  "time_limit_ms": 1000,
+  "output_limit_bytes": 65536,
+  "testcases": [
+    {
+      "input": "racecar\n",
+      "expected": "YES\n"
+    },
+    {
+      "input": "hello\n",
+      "expected": "NO\n"
+    },
+    {
+      "input": "A\n",
+      "expected": "YES\n"
+    },
+    {
+      "input": "abcba\n",
+      "expected": "YES\n"
+    },
+    {
+      "input": "abcde\n",
+      "expected": "NO\n"
+    }
+  ]
+}
+
