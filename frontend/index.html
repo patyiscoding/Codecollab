@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeCollab MVP</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>CodeCollab MVP</h1>
+        <p class="muted">Vite + TypeScript frontend + Python backend on GCP.</p>
+        <div id="authStatus" class="auth-status"></div>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <label>
+            <span>API Base</span>
+            <input id="apiBase" type="text" value="http://localhost:8000" />
+          </label>
+          <label>
+            <span>Username</span>
+            <input id="username" type="text" value="anonymous" maxlength="32" />
+          </label>
+          <label>
+            <span>Language</span>
+            <select id="language">
+              <option value="python">python</option>
+              <option value="javascript">javascript</option>
+            </select>
+          </label>
+          <button id="reload" class="btn">Reload Problems</button>
+        </div>
+
+        <div class="row">
+          <label class="grow">
+            <span>Problem</span>
+            <select id="problemSelect"></select>
+          </label>
+        </div>
+
+        <pre id="statement" class="statement"></pre>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <button id="loadTemplate" class="btn secondary">Load Template</button>
+          <button id="submit" class="btn primary">Submit</button>
+          <button id="viewHistory" class="btn">View History</button>
+        </div>
+        <div id="editor-container" style="height: 400px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-top: 14px;"></div>
+      </section>
+
+      <section class="grid">
+        <section class="card">
+          <div id="result"></div>
+        </section>
+        <section class="card">
+          <div id="leaderboard"></div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h2 id="authModalTitle">Login</h2>
+        <form id="authForm">
+          <label>
+            <span>Username</span>
+            <input id="authUsername" type="text" required minlength="3" />
+          </label>
+          <label>
+            <span>Password</span>
+            <input id="authPassword" type="password" required minlength="6" />
+          </label>
+          <div class="modal-actions">
+            <button type="submit" class="btn primary">Submit</button>
+            <button type="button" id="authCancel" class="btn">Cancel</button>
+            <button type="button" id="authToggle" class="btn secondary"></button>
+          </div>
+          <div id="authError" class="error-message"></div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
