@@ -69,16 +69,16 @@
         <form id="authForm">
           <label>
             <span>Username</span>
-            <input id="authUsername" type="text" required minlength="3" />
+            <input id="authUsername" type="text" required/>
           </label>
           <label>
             <span>Password</span>
-            <input id="authPassword" type="password" required minlength="6" />
+            <input id="authPassword" type="password" required/>
           </label>
           <div class="modal-actions">
             <button type="submit" class="btn primary">Submit</button>
-            <button type="button" id="authCancel" class="btn">Cancel</button>
             <button type="button" id="authToggle" class="btn secondary"></button>
+            <button type="button" id="authCancel" class="btn">Cancel</button>
           </div>
           <div id="authError" class="error-message"></div>
         </form>

@@ -47,6 +47,12 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
 
+To run as a Docker container:
+```bash
+docker build --tag 'backend' .
+docker run -p 8080:8080 backend
+```
+
 ### Frontend
 
 ```bash

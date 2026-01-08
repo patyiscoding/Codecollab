@@ -6,24 +6,24 @@
   "output_limit_bytes": 65536,
   "testcases": [
     {
-      "input": "Hello World\n",
-      "expected": "3\n"
+      "input": "Hello World",
+      "expected_output": "3"
     },
     {
-      "input": "aeiou\n",
-      "expected": "5\n"
+      "input": "aeiou",
+      "expected_output": "5"
     },
     {
-      "input": "xyz\n",
-      "expected": "0\n"
+      "input": "xyz",
+      "expected_output": "0"
     },
     {
-      "input": "AEIOU\n",
-      "expected": "5\n"
+      "input": "AEIOU",
+      "expected_output": "5"
     },
     {
-      "input": "Programming is fun\n",
-      "expected": "5\n"
+      "input": "Programming is fun",
+      "expected_output": "5"
     }
   ]
 }

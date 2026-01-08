@@ -140,9 +140,11 @@ def create_submission(
     """Submit code for judging (requires authentication)"""
     # Override username with authenticated user
     req.username = current_user.username
+    print("Received problem ID: ", req.problem_id)
     
     try:
         p = repo.get(req.problem_id)
+        print("Retrieved problem: ", p)
     except KeyError:
         raise HTTPException(status_code=404, detail="problem_not_found")
     result = judge_submission(
@@ -152,6 +154,7 @@ def create_submission(
         time_limit_ms=p.time_limit_ms,
         output_limit_bytes=p.output_limit_bytes,
     )
+    print("Submission result: ", result)
     submission = store.add_submission(req, result)
     return submission
 

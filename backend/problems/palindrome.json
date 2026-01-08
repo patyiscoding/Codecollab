@@ -6,24 +6,24 @@
   "output_limit_bytes": 65536,
   "testcases": [
     {
-      "input": "racecar\n",
-      "expected": "YES\n"
+      "input": "racecar",
+      "expected_output": "YES"
     },
     {
-      "input": "hello\n",
-      "expected": "NO\n"
+      "input": "hello",
+      "expected_output": "NO"
     },
     {
-      "input": "A\n",
-      "expected": "YES\n"
+      "input": "A",
+      "expected_output": "YES"
     },
     {
-      "input": "abcba\n",
-      "expected": "YES\n"
+      "input": "abcba",
+      "expected_output": "YES"
     },
     {
-      "input": "abcde\n",
-      "expected": "NO\n"
+      "input": "abcde",
+      "expected_output": "NO"
     }
   ]
 }

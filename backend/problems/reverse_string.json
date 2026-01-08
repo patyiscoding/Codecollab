@@ -5,9 +5,9 @@
   "time_limit_ms": 1000,
   "output_limit_bytes": 32000,
   "testcases": [
-    { "stdin": "hello\n", "stdout": "olleh\n" },
-    { "stdin": "a b c\n", "stdout": "c b a\n" },
-    { "stdin": "12345\n", "stdout": "54321\n" }
+    { "stdin": "hello", "stdout": "olleh" },
+    { "stdin": "a b c", "stdout": "c b a" },
+    { "stdin": "12345", "stdout": "54321" }
   ]
 }
 

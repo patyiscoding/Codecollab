@@ -186,6 +186,7 @@ textarea#code {
 
 .btn.secondary { 
   background: var(--btn2);
+  color: white;
 }
 
 .btn.primary { 

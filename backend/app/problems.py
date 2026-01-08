@@ -86,6 +86,6 @@ class ProblemRepo:
         for p in self.list():
             if p.problem_id == problem_id:
                 return p
-        raise KeyError(f"problem not found: {problem_id}")
+        raise KeyError(f"Problem not found: {problem_id}")
 
 
