@@ -48,7 +48,6 @@ let authState: AuthState = {
  */
 interface Elements {
   apiBase: HTMLInputElement;
-  username: HTMLInputElement;
   language: HTMLSelectElement;
   reload: HTMLButtonElement;
   problemSelect: HTMLSelectElement;
@@ -74,7 +73,6 @@ function getElements(): Elements {
 
   return {
     apiBase: $<HTMLInputElement>('apiBase'),
-    username: $<HTMLInputElement>('username'),
     language: $<HTMLSelectElement>('language'),
     reload: $<HTMLButtonElement>('reload'),
     problemSelect: $<HTMLSelectElement>('problemSelect'),
@@ -145,6 +143,7 @@ function showAuthModal(els: Elements, mode: 'login' | 'register'): void {
   // Set mode
   title.textContent = mode === 'login' ? 'Login' : 'Register';
   toggleBtn.textContent = mode === 'login' ? 'Need an account? Register' : 'Have an account? Login';
+  errorDiv.style.display = 'none';
   errorDiv.textContent = '';
   form.reset();
   
@@ -154,6 +153,7 @@ function showAuthModal(els: Elements, mode: 'login' | 'register'): void {
   // Handle form submission
   form.onsubmit = async (e) => {
     e.preventDefault();
+    errorDiv.style.display = 'none';
     errorDiv.textContent = '';
     
     const credentials = {
@@ -179,6 +179,7 @@ function showAuthModal(els: Elements, mode: 'login' | 'register'): void {
       modal.style.display = 'none';
       setText(els.result, `Successfully ${mode === 'login' ? 'logged in' : 'registered'} as ${user.username}`);
     } catch (error) {
+      errorDiv.style.display = 'block';
       errorDiv.textContent = String(error);
     }
   };
